@@ -1,0 +1,115 @@
+/* Reset y configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5e6ff;
+    margin: 0;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.credenciales {
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    text-align: center;
+}
+
+.credenciales h2 {
+    color: #6a1b9a;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+/* Estilos del formulario */
+.input-group {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1em;
+}
+
+/* Botones */
+.botones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.botones button {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botones button[type="submit"] {
+    background-color: #6a1b9a;
+    color: #fff;
+}
+
+.botones button[type="button"] {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.botones button[type="submit"]:hover {
+    background-color: #501374;
+}
+
+.botones button[type="button"]:hover {
+    background-color: #c0c0c0;
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #afbafb 25%, #b3d8ff 25%, #b3d8ff 50%, #afbafb 50%, #afbafb 75%, #b3d8ff 75%);
+    background-size: 300% 300%;
+    animation: gradientMove 8s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 70% 70%;
+    }
+}
+
