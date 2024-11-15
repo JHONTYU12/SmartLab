@@ -83,4 +83,4 @@ Sigue estos pasos para instalar y ejecutar **SmartLab**:
 ## **Contacto**
 ¿Tienes preguntas o comentarios? Contáctanos:
 - **Correo**: peraltajosue111@gmail.com
-- **GitHub**: [SmartLab](https://github.com/JHONTYU12/smartlab)
+- **GitHub**: [SmartLab](https://github.com/JHONTYU12/)
