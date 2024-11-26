@@ -1,104 +1,55 @@
-/* Reset y configuración general */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     background-color: #f5e6ff;
     margin: 0;
 }
 
-.formulario {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-}
-
+/* Estilo del formulario */
 .credenciales {
-    width: 100%;
-    max-width: 500px;
-    padding: 40px;
-    text-align: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.credenciales h2 {
-    color: #6a1b9a;
+/* Título */
+.titulo {
     font-size: 2.5em;
-    margin-bottom: 40px;
-}
-
-/* Estilos del formulario */
-.input-group {
-    margin-bottom: 30px;
-    text-align: left;
-}
-
-.input-group label {
-    display: block;
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1.1em;
+    color: #6a1b9a; /* Color morado específico */
+    font-weight: bold;
 }
 
 /* Botones */
-.botones {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 30px;
+.boton-morado {
+    background-color: #6a1b9a !important; /* Color morado */
+    color: #ffffff !important;
+    border: 2px solid transparent;
+    box-sizing: border-box; /* Evitar cambios de tamaño */
 }
 
-.botones button {
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.boton-morado:hover {
+    background-color: #501374 !important; /* Tonalidad más oscura */
+    border-color: #ffffff !important;
 }
 
-.botones button[type="submit"] {
-    background-color: #6a1b9a;
-    color: #fff;
+.boton-gris {
+    background-color: #e0e0e0 !important;
+    color: #333 !important;
+    border: 2px solid transparent;
+    box-sizing: border-box;
 }
 
-.botones button[type="button"] {
-    background-color: #e0e0e0;
-    color: #333;
+.boton-gris:hover {
+    background-color: #c0c0c0 !important;
+    border-color: #6a1b9a !important; /* Mostrar borde */
 }
 
-.botones button[type="submit"]:hover {
-    background-color: #501374;
-}
-
-.botones button[type="button"]:hover {
-    background-color: #c0c0c0;
-}
-
-
+/* Fondo animado */
 body::before {
     content: "";
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(135deg, #afbafb 25%, #b3d8ff 25%, #b3d8ff 50%, #afbafb 50%, #afbafb 75%, #b3d8ff 75%);
+    background: linear-gradient(135deg, #6a1b9a 25%, #b3d8ff 25%, #b3d8ff 50%, #6a1b9a 50%, #6a1b9a 75%, #b3d8ff 75%);
     background-size: 300% 300%;
     animation: gradientMove 8s infinite alternate;
     z-index: -1;
@@ -112,4 +63,3 @@ body::before {
         background-position: 70% 70%;
     }
 }
-

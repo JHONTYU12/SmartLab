@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home User - Gestor de Aulas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/style/homeUser.css">
+</head>
+<body>
+    <div class="container-fluid vh-100 bg-primario">
+        <!-- Fondo adicional al final -->
+        <div class="bg-primario py-1"></div>
+        <header class="py-3 text-center bg-secundario shadow">
+            <h1 class="titulo">Bienvenido (Nombre)</h1>
+        </header>
+
+        <main class="container py-5">
+            <!-- Tus Reservaciones -->
+            <section class="shadow p-4 mb-5 bg-white rounded">
+                <h2 class="subtitulo">Tus reservaciones</h2>
+                <table class="table table-hover mt-3">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Elemento</th>
+                            <th>Descripción</th>
+                            <th>Tu reserva es en:</th>
+                            <th>Fecha y Hora</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Libros</td>
+                            <td>Libros de Ingeniería en Software</td>
+                            <td>3 días</td>
+                            <td>8 de noviembre 2024<br>9:00 - 10:00</td>
+                        </tr>
+                        <tr>
+                            <td>Tutoría</td>
+                            <td>Tutoría de aplicaciones web</td>
+                            <td>2 días</td>
+                            <td>7 de noviembre 2024<br>11:00 - 12:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Reservar Ahora -->
+            <section class="shadow p-4 mb-5 bg-white rounded">
+                <h2 class="subtitulo">Reserva ahora</h2>
+                <p class="fw-bold">Disponibles:</p>
+                <div class="filter-container mb-3">
+                    <input type="text" class="form-control" placeholder="Filtrar por elemento...">
+                </div>                
+                <table class="table table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Elemento</th>
+                            <th>Descripción</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-id="1">
+                            <td>Libros</td>
+                            <td>Libro de aplicaciones web</td>
+                            <td class="d-flex align-items-center gap-3">
+                                <button class="btn btn-primary boton-morado">Verificar Disponibilidad</button>
+                                <i class="fa fa-star estrella" data-id="1">★</i>
+                            </td>
+                        </tr>
+                        <tr data-id="2">
+                            <td>PC Lab4-002</td>
+                            <td>PC de laboratorio</td>
+                            <td class="d-flex align-items-center gap-3">
+                                <button class="btn btn-primary boton-morado">Verificar Disponibilidad</button>
+                                <i class="fa fa-star estrella" data-id="2">★</i>
+                            </td>
+                        </tr>
+                        <tr data-id="3">
+                            <td>Tutoría</td>
+                            <td>Tutoría de aplicaciones web</td>
+                            <td class="d-flex align-items-center gap-3">
+                                <button class="btn btn-primary boton-morado">Verificar Disponibilidad</button>
+                                <i class="fa fa-star estrella" data-id="3">★</i>
+                            </td>
+                        </tr>
+                        <tr data-id="4">
+                            <td>Aula 1</td>
+                            <td>Aula equipada para conferencias</td>
+                            <td class="d-flex align-items-center gap-3">
+                                <button class="btn btn-primary boton-morado">Verificar Disponibilidad</button>
+                                <i class="fa fa-star estrella" data-id="4">★</i>
+                            </td>
+                        </tr>
+                        <tr data-id="5">
+                            <td>PC Lab4-003</td>
+                            <td>PC con monitor HD</td>
+                            <td class="d-flex align-items-center gap-3">
+                                <button class="btn btn-primary boton-morado">Verificar Disponibilidad</button>
+                                <i class="fa fa-star estrella" data-id="5">★</i>
+                            </td>
+                        </tr>
+                        <tr data-id="6">
+                            <td>Aula E20P3A12</td>
+                            <td>Aula para presentaciones y reuniones</td>
+                            <td class="d-flex align-items-center gap-3">
+                                <button class="btn btn-primary boton-morado">Verificar Disponibilidad</button>
+                                <i class="fa fa-star estrella" data-id="6">★</i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Favoritos -->
+            <section class="shadow p-4 mb-5 bg-white rounded">
+                <h2 class="subtitulo">Favoritos:</h2>
+                <table class="table table-hover mt-3">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Elemento</th>
+                            <th>Descripción</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="favoritos-body">
+                        <!-- Aquí se agregarán las filas de favoritos dinámicamente -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <!-- Fondo adicional al final -->
+    <div class="bg-primario py-4"></div>
+    <!-- FontAwesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="/frontend/JavaScript/homeUser.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
