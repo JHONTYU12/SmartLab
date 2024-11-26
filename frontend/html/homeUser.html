@@ -12,8 +12,10 @@
     <div class="container-fluid vh-100 bg-primario">
         <!-- Fondo adicional al final -->
         <div class="bg-primario py-1"></div>
-        <header class="py-3 text-center bg-secundario shadow">
+        <header class="py-3 text-center bg-secundario shadow d-flex justify-content-between align-items-center px-3">
             <h1 class="titulo">Bienvenido (Nombre)</h1>
+            <!-- Botón de Cerrar Sesión -->
+            <button class="btn btn-danger" id="logout-btn">Cerrar Sesión</button>
         </header>
 
         <main class="container py-5">
@@ -25,23 +27,12 @@
                         <tr>
                             <th>Elemento</th>
                             <th>Descripción</th>
-                            <th>Tu reserva es en:</th>
-                            <th>Fecha y Hora</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Libros</td>
-                            <td>Libros de Ingeniería en Software</td>
-                            <td>3 días</td>
-                            <td>8 de noviembre 2024<br>9:00 - 10:00</td>
-                        </tr>
-                        <tr>
-                            <td>Tutoría</td>
-                            <td>Tutoría de aplicaciones web</td>
-                            <td>2 días</td>
-                            <td>7 de noviembre 2024<br>11:00 - 12:00</td>
-                        </tr>
+                    <tbody id="reservaciones-body">
+                        <!-- Reservas dinámicas -->
                     </tbody>
                 </table>
             </section>
@@ -62,11 +53,12 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- Elementos dinámicos agregados -->
                         <tr data-id="1">
                             <td>Libros</td>
                             <td>Libro de aplicaciones web</td>
                             <td class="d-flex align-items-center gap-3">
-                                <button class="btn btn-primary boton-morado">Verificar Disponibilidad</button>
+                                <button class="btn btn-primary boton-morado verificar-btn" data-elemento="Libros" data-descripcion="Libro de aplicaciones web">Verificar Disponibilidad</button>
                                 <i class="fa fa-star estrella" data-id="1">★</i>
                             </td>
                         </tr>
@@ -74,40 +66,48 @@
                             <td>PC Lab4-002</td>
                             <td>PC de laboratorio</td>
                             <td class="d-flex align-items-center gap-3">
-                                <button class="btn btn-primary boton-morado">Verificar Disponibilidad</button>
+                                <button class="btn btn-primary boton-morado verificar-btn" data-elemento="PC Lab4-002" data-descripcion="PC de laboratorio">Verificar Disponibilidad</button>
                                 <i class="fa fa-star estrella" data-id="2">★</i>
                             </td>
                         </tr>
                         <tr data-id="3">
-                            <td>Tutoría</td>
-                            <td>Tutoría de aplicaciones web</td>
+                            <td>Proyector HD</td>
+                            <td>Proyector de alta resolución</td>
                             <td class="d-flex align-items-center gap-3">
-                                <button class="btn btn-primary boton-morado">Verificar Disponibilidad</button>
+                                <button class="btn btn-primary boton-morado verificar-btn" data-elemento="Proyector HD" data-descripcion="Proyector de alta resolución">Verificar Disponibilidad</button>
                                 <i class="fa fa-star estrella" data-id="3">★</i>
                             </td>
                         </tr>
                         <tr data-id="4">
-                            <td>Aula 1</td>
-                            <td>Aula equipada para conferencias</td>
+                            <td>Aula E20P3A12</td>
+                            <td>Aula equipada con pizarras interactivas</td>
                             <td class="d-flex align-items-center gap-3">
-                                <button class="btn btn-primary boton-morado">Verificar Disponibilidad</button>
+                                <button class="btn btn-primary boton-morado verificar-btn" data-elemento="Aula E20P3A12" data-descripcion="Aula equipada con pizarras interactivas">Verificar Disponibilidad</button>
                                 <i class="fa fa-star estrella" data-id="4">★</i>
                             </td>
                         </tr>
                         <tr data-id="5">
-                            <td>PC Lab4-003</td>
-                            <td>PC con monitor HD</td>
+                            <td>Microscopio</td>
+                            <td>Microscopio óptico con aumento</td>
                             <td class="d-flex align-items-center gap-3">
-                                <button class="btn btn-primary boton-morado">Verificar Disponibilidad</button>
+                                <button class="btn btn-primary boton-morado verificar-btn" data-elemento="Microscopio" data-descripcion="Microscopio óptico con aumento">Verificar Disponibilidad</button>
                                 <i class="fa fa-star estrella" data-id="5">★</i>
                             </td>
                         </tr>
                         <tr data-id="6">
-                            <td>Aula E20P3A12</td>
-                            <td>Aula para presentaciones y reuniones</td>
+                            <td>Aula 1</td>
+                            <td>Aula equipada para conferencias</td>
                             <td class="d-flex align-items-center gap-3">
-                                <button class="btn btn-primary boton-morado">Verificar Disponibilidad</button>
+                                <button class="btn btn-primary boton-morado verificar-btn" data-elemento="Aula 1" data-descripcion="Aula equipada para conferencias">Verificar Disponibilidad</button>
                                 <i class="fa fa-star estrella" data-id="6">★</i>
+                            </td>
+                        </tr>
+                        <tr data-id="7">
+                            <td>Impresora 3D</td>
+                            <td>Impresora 3D de alta precisión</td>
+                            <td class="d-flex align-items-center gap-3">
+                                <button class="btn btn-primary boton-morado verificar-btn" data-elemento="Impresora 3D" data-descripcion="Impresora 3D de alta precisión">Verificar Disponibilidad</button>
+                                <i class="fa fa-star estrella" data-id="7">★</i>
                             </td>
                         </tr>
                     </tbody>

@@ -34,7 +34,16 @@ function validateLoginForm() {
 // Escuchar el clic del botón de inicio de sesión
 loginBtn.addEventListener('click', () => {
     if (validateLoginForm()) {
-        // Redirigir al home del usuario después de un inicio exitoso
-        window.location.href = '/frontend/html/homeUser.html';
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim();
+
+        // Verificar si es admin o usuario normal
+        if (email === 'admin@gmail.com' && password === 'admin') {
+            // Redirigir al Home Admin
+            window.location.href = '/frontend/html/homeAdmin.html';
+        } else {
+            // Redirigir al Home User
+            window.location.href = '/frontend/html/homeUser.html';
+        }
     }
 });
